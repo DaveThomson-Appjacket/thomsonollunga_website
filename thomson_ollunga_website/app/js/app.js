@@ -55,7 +55,8 @@ function set_picture_and_general_contact(data){
                 var specialties = value["specialties"];
                 var phone_number = value["contact_details"]["phone_number"];
                 var email_address = value["contact_details"]["email_address"];
-		var address = value["contact_details"]["address"];
+		var address_city = value["contact_details"]["address_city"];
+		var address_state = value["contact_details"]["address_state"];
 
 		var contact_card = $("<div/>");
                 contacts_row.addClass("contacts-row").addClass("d-flex").addClass("flex-row").addClass("justify-content-around").addClass("flex-wrap");
@@ -66,7 +67,8 @@ function set_picture_and_general_contact(data){
                         $(this).find(".phone_number").attr("href","tel:+1" + phone_number_to_dial);
                         $(this).find(".email_address").text(email_address);
                         $(this).find(".email_address").attr("href","mailto:" + email_address);
-			$(this).find(".address").text(address);
+			$(this).find(".address-street").text(address_city);
+			$(this).find(".address-state-zip").text(address_state);
 			$(".picture-secondary").append($(this));
 		});
 
@@ -152,7 +154,7 @@ function set_logo(data){
   		var wrapper = $("<div/>");
   		$(wrapper).addClass("brand");
   		var image = $("<img/>");
-  		$(image).attr("src","./app/images/" + data["site-logo"]);
+  		$(image).attr("src","app/images/" + data["site-logo"]);
   		$(image).addClass("heading-logo");
   		$(wrapper).append($(image));
   		$(div).append($(wrapper));

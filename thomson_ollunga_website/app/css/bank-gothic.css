@@ -9,6 +9,7 @@
   font-style:normal;
   line-height: 2;
   word-spacing: 0.25em;
+  color: #b98f65;
 }
 .bank-gothic > span > a {
   font-family: "BankGothic", Arial;
@@ -16,4 +17,5 @@
   font-style:normal;
   line-height: 2;
   word-spacing: 0.25em;
+  color: #b98f65;
 }
