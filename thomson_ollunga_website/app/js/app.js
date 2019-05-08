@@ -32,7 +32,7 @@ function set_about(data){
 		}
 	});
 	$(".about").css("min-height",$(window).height());
-	$(".about").width($(window).width());
+	//$(".about").width($(window).width());
 }
 function get_section(data, section_name){
 	var content_sections = data["content-sections"];
@@ -74,7 +74,7 @@ function set_picture_and_general_contact(data){
 		});
 
 	});
-	$(".picture-secondary").width($(window).width());
+	//$(".picture-secondary").width($(window).width());
 	$(".picture-secondary").height($(window).height() - $(".navbar").height() - ($(".blog-footer").height()*2.5));
 }
 function set_contact(data){
